@@ -21,22 +21,24 @@ const RecipeDetails = () => {
     }
 
     return (
-        <SafeAreaView>
             <ScrollView style={styles.container}>
                 <Text style={styles.title}>{recipe.name}</Text>
                 <Text style={styles.description}>{recipe.description}</Text>
 
                 <Text style={styles.section}>Ingredientes:</Text>
                 {recipe.ingredients.map((item, index) => (
-                    <Text key={index}>• {item}</Text>
+                    <Text key={index}>
+                        • {item}
+                    </Text>
                 ))}
 
                 <Text style={styles.section}>Modo de preparo:</Text>
                 {recipe.steps.map((step, index) => (
-                    <Text key={index}>{index + 1}. {step}</Text>
+                    <Text key={index} style={styles.prepare}>
+                        {index + 1}. {step}
+                    </Text>
                 ))}
             </ScrollView>
-        </SafeAreaView>
     );
 };
 

@@ -13,8 +13,12 @@ const styles = StyleSheet.create({
   },
   section: {
     marginTop: 15,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginBottom: 8
   },
+  prepare: {
+    marginBottom: 10
+  }
 });
 
 export default styles;
